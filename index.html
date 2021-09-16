@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <title>weather app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="banner">
+          <div class="banner__info">
+            <i class='bx bxs-map market-violet'></i>
+            <p id="loaction-bogota"></p>
+          </div>
+        </div>
+      </header>
+      <!-- Clima bogota desde api -->
+      <div class="current-weather">
+        <div class="current-weather__item-first" id="icon-box-bogota">
+
+          <p id="description-CO" class="description-bogota order"></p>
+        </div>
+        <div class="current-weather__item-second">
+          <p id="temp-BO"></p>
+        </div>
+      </div>
+
+      <section class="section">
+        <!--3 Days Forecast-->
+        <div class="section__item">
+          <h2><span>3 Days</span> Forecast</h2>
+
+          <div class="section__cards">
+            <div class="card">
+              <div class="card__left">
+                <img src="./assets/images/icons/02n.png" alt="icono" class="icon-forecast" />
+                <p>
+                  Fraday <br />
+                  <span class="card-span-text">Rain</span>
+                </p>
+              </div>
+              <div class="card__right">
+                <p>32/23</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__left">
+                <img src="./assets/images/icons/03d.png" alt="icono" class="icon-forecast" />
+                <p>
+                  Fraday <br />
+                  <span class="card-span-text">Rain</span>
+                </p>
+              </div>
+              <div class="card__right right-ligth">
+                <p>32/23</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__left">
+                <img src="./assets/images/icons/01d.png" alt="icono" class="icon-forecast"/>
+                <p>
+                  Fraday <br />
+                  <span class="card-span-text">Rain</span>
+                </p>
+              </div>
+              <div class="card__right right-ligth">
+                <p>32/23</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--PLACE TO VISIT-->
+        <div class="section__item item-place">
+          <h2><span>Place To</span> Visit</h2>
+
+          <div class="item-place-img">
+            <i class='bx bxs-map white-market'></i>
+            <p>Arab Street Singapore</p>
+          </div>
+        </div>
+        <!--TOP REVIEWS-->
+        <div class="section__item reviwes">
+          <div class="reviwes__top">
+            <p class="gray-text"><span>+</span> Top Reviews</p>
+
+            <div>
+              <img
+                src="./assets/images/user-1.jpg"
+                alt="user"
+                class="user-img"
+              />
+              <img
+                src="./assets/images/user-2.jpg"
+                alt="user"
+                class="user-img"
+              />
+              <img
+                src="./assets/images/user-3.jpg"
+                alt="user"
+                class="user-img"
+              />
+              <button href="#" class="btn">9+</button>
+            </div>
+          </div>
+
+          <div class="first">
+            <i class='bx bxs-map white-market'></i> 
+            <p> art science 
+              museum
+            </p>
+          </div>
+          <div class="second">
+            <i class='bx bxs-map white-market'></i> 
+            <p>Fountain</p>
+          </div>
+        </div>
+
+        <!-- paris lyon  -->
+        <div class="section__item france-weather">
+          <div class="card-france">
+            <div class="card-france__data">
+              <div class="card-france__data__icon" id="icon-box">
+               <!--  <img  id="icon-img"> -->
+              </div>
+
+              <div class="card-france__data__text">
+                <!-- call api  -->
+
+                <p id="temp-lyon" class="tempFR"> </p>
+               
+                <p id="location-Lyon" class="locationFR" >Lyon</p>
+             
+              </div>
+            </div>
+
+            <div class="card-france__details">
+              <!-- call api  -->
+              <p id="humidity-Lyon" class="gray-text"></p>
+              <p class="gray-text">Nortwesrt</p>
+              <p id="wind_Lyon" class="gray-text"></p>
+            </div>
+          </div>
+
+          <div class="card-france">
+            <div class="card-france__data">
+              <div class="card-france__data__icon " id="icon-box-paris">
+               
+              </div>
+
+              <div class="card-france__data__text">
+                <p id="temp-paris" class="tempFR"></p>
+                <p id="location-paris" class="locationFR"></p>
+              </div>
+            </div>
+
+            <div class="card-france__details">
+              <p id="humidity-paris" class="gray-text" ></p>
+              <p class="gray-text">West</p>
+              <p id="wind-paris" class="gray-text"></p>
+            </div>
+          </div>
+
+          <!--add Location -->
+          <div class="add-locations">
+            <input type="text" placeholder="Add Location" />
+            <img src="./assets/images/location.svg" alt="location-image" />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script src="./assets/js/app.js" type="module"></script>
+</html>

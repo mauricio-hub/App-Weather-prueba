@@ -1,0 +1,609 @@
+:root {
+  --color-blue: #867AE9;
+  --color-blue-dark: #2a4181;
+  --color-blue-light: #e2e9f0;
+  --color-white: #fFF;
+  --color-grey-dark-1: rgb(146, 146, 146);
+  --color-grey-dark-2: rgb(236, 235, 235);
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #d2e1e9;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.description-bogota {
+  color: white;
+  font-size: 0.75rem;
+}
+
+/* 
+.current-weather-bogota{
+    color:white;
+    font-size: 2rem;
+}
+ */
+.black {
+  color: black;
+  font-size: 40px;
+}
+
+.white-market {
+  color: white;
+}
+
+.gray-text {
+  color: var(--color-grey-dark-1);
+  font-size: 0.75rem;
+}
+
+input {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  text-align: center;
+}
+
+.icon-forecast {
+  width: 30px;
+  height: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 8rem auto;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-dark);
+  overflow: hidden;
+  min-height: 50rem;
+  border-radius: 30px;
+}
+
+@media only screen and (max-width: 75em) {
+  .container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+
+.banner {
+  margin: 40px auto;
+  width: 90%;
+  height: 50vh;
+  background-image: url(./images/1.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 50vh;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 80px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .banner {
+    margin: 0px auto;
+    width: 80%;
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .banner {
+    margin: 0px auto;
+    width: 100%;
+    height: 50vh;
+    border-radius: 0px;
+  }
+}
+
+.banner__info {
+  height: 100px;
+  width: 135px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 8px;
+}
+
+.banner__info p {
+  color: var(--color-blue);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+.banner__info .market-violet {
+  color: var(--color-blue);
+  font-size: 20px;
+}
+
+.section {
+  width: 87%;
+  margin-left: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .section {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .section {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.section__item {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .section__item {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .section__item {
+    margin: 0 auto;
+  }
+  .section__item h2 {
+    margin: 0 auto;
+  }
+}
+
+.section__item h2 {
+  font-size: 1.65rem;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.section__item h2 span {
+  font-weight: bold;
+}
+
+.current-weather {
+  top: 220px;
+  position: absolute;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-dark);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .current-weather {
+    top: 50px;
+  }
+}
+
+@media only screen and (max-width: 68.75em) {
+  .current-weather {
+    top: 100px;
+  }
+}
+
+.current-weather__item-first {
+  margin-top: -20px;
+  width: 130%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue-dark);
+  margin-left: 24px;
+  border-radius: 0px 16px 0px 0px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .current-weather__item-first {
+    width: 100%;
+    height: 60px;
+    margin-left: 0;
+  }
+}
+
+.current-weather__item-first p {
+  margin-top: -10px;
+}
+
+.current-weather__item-first .icon-weather-bogota {
+  height: 50px;
+  width: 60px;
+}
+
+.current-weather__item-first .order {
+  order: 1;
+}
+
+.current-weather__item-second {
+  width: 130%;
+  height: 80px;
+  margin-left: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue);
+  border-bottom-right-radius: 20px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .current-weather__item-second {
+    width: 100%;
+    height: 60px;
+    margin-left: 0;
+  }
+}
+
+.current-weather__item-second p {
+  color: white;
+  font-size: 2rem;
+}
+
+.card {
+  display: flex;
+  border: 1px solid var(--color-grey-dark-2);
+  overflow: hidden;
+  height: 60px;
+  gap: 20px;
+  margin-left: 0;
+  margin-bottom: 8px;
+  width: 160px;
+  box-shadow: var(--shadow-light);
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .card {
+    margin: 0 auto;
+  }
+}
+
+.card__left {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+
+.card__right {
+  display: inherit;
+  background-color: var(--color-blue);
+  flex-basis: 50%;
+  justify-self: right;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card .right-ligth {
+  background-color: var(--color-blue-light);
+}
+
+.card .card-span-text {
+  color: var(--color-grey-dark-1);
+}
+
+.item-place-img {
+  height: 200px;
+  width: 80%;
+  background-image: url(./images/2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: var(--shadow-dark);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .item-place-img {
+    margin: 0 auto;
+  }
+}
+
+.item-place-img p {
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+}
+
+.item-place-img .white-market {
+  margin-top: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.reviwes {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .reviwes {
+    height: 80vh;
+  }
+}
+
+.reviwes__top {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 180px;
+}
+
+.reviwes .user-img {
+  width: 20px;
+  border-radius: 4px;
+}
+
+.reviwes .btn {
+  background-color: #b6aee6;
+  width: 20px;
+  height: 20px;
+  color: white;
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  margin-left: 2px;
+}
+
+.reviwes .first {
+  height: 70px;
+  width: 160px;
+  border-radius: 20px;
+  background-image: url(./images/3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .reviwes .first {
+    margin: 20px auto;
+  }
+}
+
+.reviwes .first p {
+  color: white;
+  font-weight: bold;
+  width: 80px;
+}
+
+.reviwes .first .bx {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.reviwes .second {
+  height: 110px;
+  width: 160px;
+  border-radius: 20px;
+  background-image: url(./images/4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .reviwes .second {
+    margin: 0 auto;
+  }
+}
+
+.reviwes .second p {
+  color: white;
+  font-weight: bold;
+}
+
+.reviwes .second .bx {
+  margin-top: 4px;
+  margin-right: 10px;
+}
+
+.france-weather {
+  margin-top: -140px;
+  z-index: 1;
+}
+
+.france-weather .card-france {
+  background-color: white;
+  height: 110px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-dark);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .france-weather .card-france {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .france-weather .card-france {
+    margin: 20px auto;
+    width: 80%;
+  }
+}
+
+.france-weather .card-france__data {
+  display: flex;
+  text-align: center;
+}
+
+.france-weather .card-france__data__icon {
+  background-color: var(--color-blue-light);
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.france-weather .card-france__data__text {
+  margin-left: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .france-weather .card-france__data__text {
+    gap: 0px;
+  }
+}
+
+.france-weather .card-france__data__text .tempFR {
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.france-weather .card-france__data__text .locationFR {
+  margin-top: 8px;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .france-weather .card-france__data__text .locationFR {
+    margin-right: 6px;
+  }
+}
+
+.france-weather .card-france__details {
+  display: flex;
+  margin: 20px auto;
+  margin-left: 20px;
+  gap: 30px;
+}
+
+.france-weather .add-locations {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding-top: 30px;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .france-weather .add-locations {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+.france-weather .add-locations input {
+  width: 120px;
+  margin: 10px auto;
+  background-color: var(--color-blue-light);
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .france-weather .add-locations input {
+    width: 60%;
+  }
+}
+
+.france-weather .add-locations img {
+  margin-top: 10px;
+  height: 60px;
+}
+/*# sourceMappingURL=style.css.map */

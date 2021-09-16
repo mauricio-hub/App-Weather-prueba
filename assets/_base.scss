@@ -1,0 +1,103 @@
+:root {
+    --color-blue: #867AE9;
+    --color-blue-dark: #2a4181;
+    --color-blue-light: #e2e9f0;
+
+    --color-white: #fFF;
+   
+    
+    --color-grey-dark-1: rgb(146, 146, 146);
+    --color-grey-dark-2: rgb(236, 235, 235);
+  
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  
+}
+
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: rgb(210, 225, 233);
+
+  
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.description-bogota{
+    color:white;
+    font-size: 0.75rem;
+}
+/* 
+.current-weather-bogota{
+    color:white;
+    font-size: 2rem;
+}
+ */
+.black{
+    color:black;
+    font-size: 40px;
+}
+
+.white-market{
+    color:white;         
+}
+
+.gray-text{
+    color:var(--color-grey-dark-1);
+    font-size:0.75rem;
+}
+
+input {
+    text-align: center;
+    font-size:0.75rem;
+    font-weight: bold;
+    border: 0;
+    outline: none;
+    
+  }
+  
+  ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+  :-moz-placeholder {
+    text-align: center;
+  }
+
+  .icon-forecast{
+      width: 30px;
+      height: 30px;
+  }
